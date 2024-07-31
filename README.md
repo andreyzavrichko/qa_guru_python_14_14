@@ -99,10 +99,10 @@ test
 <img title="Allure Overview" src="images/screens/allure_overview.png">
 </p>
 
-### :eye_speech_bubble: Группировка тестов по проверяемому функционалу
+### :eye_speech_bubble: Детализация шагов
 
 <p align="center">
-<img title="Allure Behaviors" src="images/screens/allure_behaviors.png">
+<img title="Allure Behaviors" src="images/screens/allure_details.png">
 </p>
 
 
