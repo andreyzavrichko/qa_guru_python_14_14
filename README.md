@@ -76,18 +76,6 @@ pip install -r requirements.txt
 pytest .
 ```
 
-### :robot: Параметры сборки
-
-> <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
->
-> <code>BROWSER</code> – браузер, в котором будут выполняться тесты (_по умолчанию - <code>chrome</code>_).
->
-> <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты (_по умолчанию - <code>91.0</code>_).
->
-> <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты (_по умолчанию - <code>1920x1080</code>_).
-
-
-
 ### :skier: Главная страница Allure-отчета
 
 <p align="center">
