@@ -70,15 +70,10 @@ pytest
 ### :robot: Удаленный запуск тестов 
 
 ```
-clean
-test
--Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
--DbrowserMobileView="${BROWSER_MOBILE}"
--DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
--DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
--Dthreads=${THREADS}
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pytest .
 ```
 
 ### :robot: Параметры сборки
