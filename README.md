@@ -79,7 +79,7 @@ pytest .
 ### :skier: Главная страница Allure-отчета
 
 <p align="center">
-<img title="Allure Overview" src="images/screens/allure_overview.png">
+<img title="Allure Overview" src="images/screens/allure_suites.png">
 </p>
 
 ### :eye_speech_bubble: Детализация шагов
