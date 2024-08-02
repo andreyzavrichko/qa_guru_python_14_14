@@ -41,7 +41,7 @@ class SearchPage:
 
     def check_auth_form(self):
         with allure.step("Проверка окна авторизации"):
-            browser.element(by.text(' Вход или регистрация ')).should(be.visible)
+            browser.element("//form[@class='login-form ng-untouched ng-pristine ng-valid']").should(be.visible)
 
     def check_result_empty(self, value):
         with allure.step("Проверка невалидного запроса"):

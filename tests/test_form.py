@@ -23,7 +23,7 @@ def test_search_visible(setup_browser):
 def test_search_count(setup_browser):
     search_page.open()
     search_page.type_search_input("ролики")
-    search_page.check_result_count("Найдено 33 товара")
+    search_page.check_result_count("Найден 41 товар в 8 категориях")
 
 
 @allure.tag("web")
