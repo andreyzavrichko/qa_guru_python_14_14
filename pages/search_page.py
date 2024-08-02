@@ -9,19 +9,19 @@ class SearchPage:
 
     def type_search_input(self, value):
         with allure.step("Ввести в поиске значение"):
-            browser.element('.input__field').click().type(value).press_enter()
+            browser.element("//input[@class='input__field input__field--indent-from-icon']").click().type(value).press_enter()
 
     def check_result(self):
         with allure.step("Проверка отображения страницы поиска"):
-            browser.element(".layout__content").should(be.visible)
+            browser.element("//main[@class='layout__content']").should(be.visible)
 
     def check_result_count(self, value):
         with allure.step("Проверка отображения страницы поиска"):
-            browser.element(".layout__content").should(have.text(value))
+            browser.element("//main[@class='layout__content']").should(have.text(value))
 
     def click_express(self):
         with allure.step("Нажать на доставку"):
-            browser.element("(//div[@class='text ng-star-inserted'])[3]").click()
+            browser.element(by.text('Экспресс-доставка от 2 часов')).click()
 
     def click_auth(self):
         with allure.step("Нажать на авторизацию"):
@@ -29,7 +29,7 @@ class SearchPage:
 
     def check_result_dropdown(self, value):
         with allure.step("Проверка отображения страницы поиска"):
-            browser.element(".dropdown__title").should(have.text(value))
+            browser.element("//div[@class='dropdown__title']").should(have.text(value))
 
     def check_hit_sales(self):
         with allure.step("Проверка количества найденного товара"):
@@ -45,15 +45,15 @@ class SearchPage:
 
     def check_result_empty(self, value):
         with allure.step("Проверка невалидного запроса"):
-            browser.element(".empty-products__header").should(have.text(value))
+            browser.element("//p[@class='empty-products__header']").should(have.text(value))
 
     def check_result_image(self):
         with allure.step("Проверка отображения картинки"):
-            browser.element(".empty-products__image").should(be.visible)
+            browser.element("//img[@class='empty-products__image']").should(be.visible)
 
     def check_result_layout(self, value):
         with allure.step("Проверка количества найденного товара"):
-            browser.element(".layout__content").should(have.text(value))
+            browser.element("//main[@class='layout__content']").should(have.text(value))
 
     def check_express_img(self):
         with allure.step("Проверка картинки экспресс-доставки"):
