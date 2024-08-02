@@ -1,9 +1,7 @@
 import allure
 from allure_commons.types import Severity
 
-from pages.search_page import SearchPage
-
-search_page = SearchPage()
+from pages.search_page import search_page
 
 
 @allure.tag("web")

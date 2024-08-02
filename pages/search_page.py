@@ -59,3 +59,5 @@ class SearchPage:
         with allure.step("Проверка картинки экспресс-доставки"):
             browser.element(by.text('Экспресс-доставка: быстра доставка за 2 часа техники'
                                     ' и электроники от М.Видео - Москва')).should(be.visible)
+
+search_page = SearchPage()
