@@ -20,10 +20,6 @@ class SearchPage:
         with allure.step("Проверка отображения страницы поиска"):
             browser.element("//main[@class='layout__content']").should(have.text(value))
 
-    def click_express(self):
-        with allure.step("Нажать на Закажи и забери заказ через 15 минут"):
-            browser.element(by.text('Закажи и забери заказ через 15 минут')).click()
-
     def click_auth(self):
         with allure.step("Нажать на авторизацию"):
             browser.element(by.text('Авторизуйтесь, чтобы применить Бонусные рубли')).click()
@@ -47,10 +43,6 @@ class SearchPage:
     def check_result_layout(self, value):
         with allure.step("Проверка количества найденного товара"):
             browser.element("//main[@class='layout__content']").should(have.text(value))
-
-    def check_express_img(self):
-        with allure.step("Проверка картинки экспресс-доставки"):
-            browser.element("(//img[@class='lazy visible-desktop '])[2]").should(be.visible)
 
 
 search_page = SearchPage()
