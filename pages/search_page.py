@@ -9,7 +9,8 @@ class SearchPage:
 
     def type_search_input(self, value):
         with allure.step("Ввести в поиске значение"):
-            browser.element("//input[@class='input__field input__field--indent-from-icon']").click().type(value).press_enter()
+            browser.element("//input[@class='input__field input__field--indent-from-icon']").click().type(
+                value).press_enter()
 
     def check_result(self):
         with allure.step("Проверка отображения страницы поиска"):
@@ -31,14 +32,6 @@ class SearchPage:
         with allure.step("Проверка отображения страницы поиска"):
             browser.element("//div[@class='dropdown__title']").should(have.text(value))
 
-    def check_hit_sales(self):
-        with allure.step("Проверка количества найденного товара"):
-            browser.element(by.text('Хиты продаж')).should(be.visible)
-
-    def check_sales_day(self):
-        with allure.step("Проверка отображения товара дня"):
-            browser.element(by.text('Товары дня')).should(be.visible)
-
     def check_auth_form(self):
         with allure.step("Проверка окна авторизации"):
             browser.element("//form[@class='login-form ng-untouched ng-pristine ng-valid']").should(be.visible)
@@ -58,5 +51,6 @@ class SearchPage:
     def check_express_img(self):
         with allure.step("Проверка картинки экспресс-доставки"):
             browser.element("(//img[@class='lazy visible-desktop '])[2]").should(be.visible)
+
 
 search_page = SearchPage()
